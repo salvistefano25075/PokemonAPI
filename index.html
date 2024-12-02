@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon App</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <html data-theme="cupcake">
+
+    </html>
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center p-4">
+
+
+    <!-- Barra superiore con il pulsante per My Pokémon -->
+    <div class="w-full flex justify-between items-center mb-6">
+        <a href="spin.html" class="btn btn-success ml-4">Aggiungi Monete</a>
+        <div class="flex items-center mr-4">
+            <span class="text-xl font-bold">Monete: </span>
+            <span id="coin-count" class="text-2xl font-bold ml-2">0</span>
+        </div>
+        <a href="mypokemon.html" class="btn btn-primary ml-4">My Pokémon</a> <!-- Link per My Pokémon -->
+    </div>
+
+    <!-- Logo Pokémon -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" height="700"
+        width="550">
+
+
+
+    <!-- Filtro per tipo di Pokémon -->
+    <div class="w-full max-w-6xl flex justify-center mt-6 mb-6">
+        <select id="type-filter" class="input input-bordered" onchange="filterByType()">
+            <option value="">Seleziona un tipo</option>
+            <option value="fire">Fuoco</option>
+            <option value="grass">Erba</option>
+            <option value="water">Acqua</option>
+            <option value="electric">Elettrico</option>
+            <option value="psychic">Psico</option>
+            <option value="bug">Insetto</option>
+            <!-- Aggiungi qui altri tipi di Pokémon -->
+        </select>
+    </div>
+
+    <!-- Barra di ricerca -->
+    <div class="w-full max-w-6xl flex justify-center mt-6">
+        <input id="search-bar" type="text" class="input input-bordered w-full max-w-xl"
+            placeholder="Cerca un Pokémon..." oninput="filterPokemons()">
+    </div>
+    <br><br>
+
+
+    <!-- Lista dei Pokémon -->
+    <div id="pokemon-cards" class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl"></div>
+
+    <br><br>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

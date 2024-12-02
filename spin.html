@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- Definizione del set di caratteri e la configurazione per dispositivi mobili -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titolo della pagina -->
+    <title>Ruota della Fortuna</title>
+    
+    <!-- Inclusione del CSS di DaisyUI per lo stile dei componenti (button, cards, ecc.) -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Inclusione di TailwindCSS per il design a livello di utility -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inclusione del foglio di stile personalizzato ruota.css per il design specifico della ruota -->
+    <link rel="stylesheet" href="ruota.css">
+
+</head>
+
+<body>
+    <!-- Contenitore principale della ruota -->
+    <div class="wheel-container">
+        <!-- Ruota con segmenti -->
+        <div class="wheel">
+            <!-- Puntatore della ruota, indica la posizione di selezione -->
+            <div class="wheel-pointer"></div>
+            
+            <!-- Segmenti della ruota, ognuno con un valore associato -->
+            <div class="wheel-segment" data-value="10"></div>
+            <div class="wheel-segment" data-value="20"></div>
+            <div class="wheel-segment" data-value="30"></div>
+            <div class="wheel-segment" data-value="50"></div>
+            <div class="wheel-segment" data-value="70"></div>
+            <div class="wheel-segment" data-value="100"></div>
+        </div>
+        
+        <!-- Bottone per attivare la rotazione della ruota -->
+        <button id="spin-button" class="btn btn-primary mt-4">Gira la Ruota</button>
+    </div>
+
+    <!-- Inclusione del file JavaScript ruota.js che gestisce la logica della ruota -->
+    <script src="ruota.js"></script>
+
+</body>
+
+</html>

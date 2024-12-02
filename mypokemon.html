@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- Definizione della codifica dei caratteri per supportare caratteri speciali -->
+    <meta charset="UTF-8">
+    <!-- Meta tag per la responsività su dispositivi mobili -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titolo della pagina -->
+    <title>MyPokémon</title>
+
+    <!-- Inclusione di DaisyUI, una libreria di componenti basati su TailwindCSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Inclusione di TailwindCSS per lo stile tramite classi utility -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Inclusione di un foglio di stile CSS personalizzato -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Impostazione del tema della pagina tramite DaisyUI -->
+    <html data-theme="cupcake"></html>
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center p-4">
+    <!-- Barra superiore con un pulsante per tornare alla home -->
+    <div class="w-full flex justify-between items-center mb-6">
+        <!-- Link per tornare alla pagina principale -->
+        <a href="index.html" class="btn btn-warning">Torna alla Home</a> 
+    </div>
+
+    <!-- Logo dell'applicazione -->
+    <img src="logo.webp" height="700" width="550"><br><BR></BR>
+
+    <!-- Sezione dove verranno visualizzate le carte dei Pokémon catturati -->
+    <div id="my-pokemon-cards" class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl"></div>
+
+    <!-- Inclusione di uno script JavaScript per la logica della pagina -->
+    <script src="mypokemon.js"></script>
+</body>
+
+</html>
